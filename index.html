@@ -1,67 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aperture Viewer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aperture Viewer - nothing.is.not.possible</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Optionally include a Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo-container">
-            <img src="assets/images/image1.png" alt="Aperture Viewer Logo">
-
-        </div>
+  <!-- Header with logo, title and tagline -->
+  <header>
+    <div class="container header-top">
+      <img src="../assets/images/image1.png" alt="Aperture Viewer Logo" class="logo">
+      <div class="header-text">
         <h1 class="title">Aperture Viewer</h1>
         <p class="tagline">nothing.is.not.possible</p>
-    </header>
+      </div>
+    </div>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#wiki">Wiki</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#credits">Credits</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <h2>Advanced Photography & Videomaking</h2>
-        <p>A cutting-edge Firestorm fork for visual experimentation in Second Life & OpenSim.</p>
-        <a href="https://github.com/williamweaver/Aperture-Viewer/releases" class="cta-button">Download Now</a>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content container">
+      <h2>Welcome to Aperture Viewer</h2>
+      <p>Advanced Photography and Videomaking Viewer for Second Life and OpenSim</p>
+      <a href="#download" class="cta-button">Download Alpha</a>
+    </div>
+  </section>
 
-    <section class="features">
-        <h2>Key Features</h2>
-        <div class="feature-list">
-            <div class="feature">
-                <h3>Experimental Visual Enhancements</h3>
-                <p>Pushing the boundaries of in-world photography & videography.</p>
-            </div>
-            <div class="feature">
-                <h3>Advanced Phototools</h3>
-                <p>Enhance image creation with next-gen controls.</p>
-            </div>
-            <div class="feature">
-                <h3>Exclusive Rendering Features</h3>
-                <p>Test never-before-seen innovations in virtual world rendering.</p>
-            </div>
-        </div>
-    </section>
+  <!-- Features Section -->
+  <section id="features" class="features container">
+    <h2>Key Features</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>Advanced Visual Techniques</h3>
+        <p>Explore innovative graphics enhancements for immersive experiences.</p>
+      </div>
+      <div class="card">
+        <h3>Phototools &amp; Visual Controls</h3>
+        <p>Experiment with advanced tools for stunning image creation.</p>
+      </div>
+      <div class="card">
+        <h3>User Feedback Hub</h3>
+        <p>Contribute and guide the future of visual development.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="gallery">
-        <h2>Showcase</h2>
-        <div class="gallery-images">
-            <a href="doc/none_of_this_is_real_Optimized.pdf">
-                <img src="assets/images/image2.png" alt="Photobook 1">
-            </a>
-            <a href="doc/we_all_have_this_madness.pdf">
-                <img src="assets/images/image3.png" alt="Photobook 2">
-            </a>
-        </div>
-    </section>
+  <!-- Wiki Section -->
+  <section id="wiki" class="wiki container">
+    <h2>Aperture Viewer Wiki</h2>
+    <p>Your comprehensive guide to all aspects of Aperture Viewer. Whether you are new or a seasoned user, our Wiki offers in-depth documentation and tutorials to master the viewer.</p>
+    <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Home" class="btn">Visit Wiki</a>
+  </section>
 
-    <footer>
-        <p>&copy; 2025 Aperture Viewer. Independent project by William Weaver.</p>
-        <p><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Privacy-Policy">Privacy Policy</a> | <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Terms-of-Service">Terms of Service</a></p>
-    </footer>
+  <!-- Download Section -->
+  <section id="download" class="download container">
+    <h2>Download Alpha Releases</h2>
+    <p>Test the cutting-edge features in our latest alpha releases. (Windows AVX-compatible processors only.)</p>
+    <a href="https://github.com/williamweaver/Aperture-Viewer/releases" class="btn">Download Now</a>
+  </section>
 
-    <script>
-        gsap.from(".title", { duration: 1.5, y: -50, opacity: 0, ease: "power2.out" });
-        gsap.from(".tagline", { duration: 1.5, y: 50, opacity: 0, delay: 0.5, ease: "power2.out" });
-        gsap.from(".hero h2, .hero p, .cta-button", { duration: 1.5, opacity: 0, delay: 1, stagger: 0.2, ease: "power2.out" });
-    </script>
+  <!-- Credits Section -->
+  <section id="credits" class="credits container">
+    <h2>Credits &amp; Acknowledgements</h2>
+    <p>Aperture Viewer is built upon the robust Firestorm codebase. Thanks to the Firestorm team, Linden Lab, and all contributors who empower this creative experiment.</p>
+    <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Credits-&-Acknowledgements" class="btn">More Info</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="container">
+    <p>&copy; 2025 Aperture Viewer. All rights reserved.</p>
+  </footer>
+
+  <!-- Smooth scrolling for navigation -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
+  </script>
 </body>
 </html>
