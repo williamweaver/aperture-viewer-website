@@ -1,4 +1,4 @@
-/* Global Styles and Color Palette */
+/* Global Styles and Color Palette (Minimalist) */
 :root {
     --color-primary: #9B65BF;         /* Aperture 256-1 */
     --color-secondary: #281159;       /* Aperture 256-2 */
@@ -6,10 +6,6 @@
     --color-accent: #384773;          /* Aperture 256-4 */
     --color-text-dark: #0D0D0D;        /* Aperture 256-5 */
     --color-highlight-1: #65BFBF;     /* My Color Theme 1 */
-    --color-highlight-2: #B3BF65;     /* My Color Theme 2 */
-    --color-highlight-3: #9B65BF;     /* My Color Theme 3 (same as primary) */
-    --color-highlight-4: #BF8765;     /* My Color Theme 4 */
-    --color-highlight-5: #645C6A;     /* My Color Theme 5 */
 
     --font-family-title: 'Space Grotesk', sans-serif;
     --font-family-body: 'Roboto Mono', monospace;
@@ -24,324 +20,227 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
-/* Header Styles */
+/* Header Styles (Minimalist) */
 header {
     background-color: var(--color-secondary);
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
 }
 
 .header-content {
-    position: relative; /* For logo positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo {
-    position: absolute;
-    top: -30px; /* Adjust as needed to position logo */
-    left: 20px; /* Adjust as needed to position logo */
-    width: 100px;  /* Adjust logo size */
+    width: 120px; /* Slightly larger logo */
     height: auto;
+    margin-bottom: 20px;
 }
-
 
 .title {
     font-family: var(--font-family-title);
-    font-size: 3.5em;
+    font-size: 4em; /* Larger title */
     font-weight: 700;
     color: white;
     margin-bottom: 10px;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
 }
 
 .tagline {
-    font-size: 1.2em;
+    font-size: 1.4em; /* Slightly larger tagline */
     color: var(--color-highlight-1);
     margin-top: 0;
     font-weight: 500;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.8px;
 }
 
 
-/* Section Styles */
+/* Section Styles (Minimalist) */
 .section {
-    padding: 80px 0;
-    border-bottom: 1px solid var(--color-accent);
-}
-
-.last-section {
-    border-bottom: none; /* Remove border on the last section */
+    padding: 100px 0; /* More vertical space */
+    text-align: center;
 }
 
 .section:nth-child(even) {
-    background-color: var(--color-text-dark); /* Slightly darker for even sections */
+    background-color: var(--color-text-dark); /* Darker for even sections */
 }
 
 .section h2 {
     font-family: var(--font-family-title);
-    font-size: 2.8em;
+    font-size: 3.5em; /* Larger section titles */
     color: white;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 40px; /* More space below titles */
     font-weight: 700;
-    letter-spacing: -0.5px;
-}
-
-.section h3 {
-    font-family: var(--font-family-title);
-    font-size: 1.8em;
-    color: var(--color-highlight-2);
-    margin-bottom: 15px;
-    text-align: center;
-    font-weight: 500;
-}
-
-.section h4 {
-    font-family: var(--font-family-title);
-    font-size: 1.5em;
-    color: var(--color-highlight-3);
-    margin-bottom: 10px;
-    font-weight: 500;
+    letter-spacing: -1px;
 }
 
 
-.section-content {
-    margin-top: 30px;
-}
-
-.section p {
-    font-size: 1.1em;
-    color: #eee; /* Slightly lighter text for body */
-    margin-bottom: 15px;
-}
-
-.section ul {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
-}
-
-.section ul li {
-    margin-bottom: 8px;
-    padding-left: 25px;
-    position: relative;
-}
-
-.section ul li::before {
-    content: "•"; /* Bullet point */
-    position: absolute;
-    left: 0;
-    color: var(--color-primary); /* Bullet color */
-    font-size: 1.4em;
-    top: -2px; /* Adjust vertical alignment */
-}
-
-.note, .warning, .important, .caution, .tip {
-    background-color: var(--color-accent);
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-size: 1.05em;
-}
-
-.warning {
-    background-color: #BF6565; /* Reddish for warning */
-}
-
-.important {
-    background-color: var(--color-highlight-4); /* Orange/Gold for important */
-}
-
-.caution {
-    background-color: #BFAF65; /* Yellowish for caution */
-    color: var(--color-text-dark); /* Dark text for contrast on yellow */
-}
-
-.tip {
-    background-color: var(--color-highlight-1); /* Cyan/Teal for tip */
-}
-
-
-/* Photobook Section */
-#photobooks .photobook-grid {
+/* Feature Section (Minimalist) */
+#features .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
-    gap: 30px;
-    margin-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 50px; /* More space between features */
+    margin-top: 60px; /* More space above features */
 }
 
-.photobook {
+.feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
     color: white;
-    transition: transform 0.3s ease;
 }
 
-.photobook:hover {
-    transform: translateY(-5px);
+.feature-item i {
+    font-size: 4em; /* Larger icons */
+    color: var(--color-primary);
+    margin-bottom: 20px;
 }
 
-.photobook img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-}
-
-.photobook p {
+.feature-item p {
+    font-size: 1.2em;
     margin: 0;
     font-weight: 500;
-    text-align: center;
-}
-
-/* Wiki Links Section */
-.wiki-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.wiki-links li {
-    padding: 0; /* Remove bullet padding */
-}
-
-.wiki-links li::before {
-    content: none; /* Remove bullets */
-}
-
-.wiki-links li a {
-    display: block;
-    padding: 12px 20px;
-    background-color: var(--color-accent);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s ease;
-}
-
-.wiki-links li a:hover {
-    background-color: var(--color-primary);
 }
 
 
-/* Download Section */
+/* Download Section (Minimalist) */
+#download .alpha-notice {
+    color: #ddd;
+    font-size: 1.1em;
+    margin-bottom: 30px;
+}
+
 .download-button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 20px 40px; /* Larger button */
     background-color: var(--color-primary);
     color: white;
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 1.2em;
+    border-radius: 10px; /* More rounded button */
+    font-size: 1.4em; /* Larger button text */
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
 }
 
 .download-button:hover {
-    background-color: var(--color-highlight-3); /* Highlight color on hover */
-    transform: scale(1.05);
+    background-color: var(--color-highlight-1);
+    transform: scale(1.08); /* More pronounced hover effect */
 }
 
-.build-links {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 20px;
-    display: flex; /* Use flexbox for horizontal links */
-    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
-    gap: 15px; /* Spacing between links */
-    justify-content: center; /* Center links horizontally */
-}
 
-.build-links li {
-    margin-bottom: 0; /* Remove default list item margin */
-    padding-left: 0; /* Remove bullet padding */
-}
-
-.build-links li::before {
-    content: none; /* Remove bullets */
-}
-
-.build-links li a {
-    display: inline-block; /* Make links inline-block for horizontal layout */
-    padding: 10px 15px;
+/* Wiki Link Section (Minimalist) */
+#wiki-link .wiki-button {
+    display: inline-block;
+    padding: 18px 35px; /* Similar to download button */
     background-color: var(--color-accent);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.build-links li a:hover {
-    background-color: var(--color-primary);
-}
-
-
-/* Highlight Links */
-.highlight-link {
-    color: var(--color-highlight-1);
-    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.3em; /* Similar button text size */
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.highlight-link:hover {
-    color: var(--color-highlight-2);
-    text-decoration: underline;
+#wiki-link .wiki-button:hover {
+    background-color: var(--color-primary);
+    transform: scale(1.05);
 }
 
 
-/* Footer Styles */
+/* Footer Styles (Minimalist) */
 footer {
     background-color: var(--color-secondary);
-    color: #ddd;
+    color: #aaa;
     text-align: center;
-    padding: 30px 0;
-    font-size: 0.9em;
+    padding: 40px 0; /* More footer padding */
+    font-size: 0.95em;
 }
 
 .footer-content {
     border-top: 1px solid var(--color-accent);
-    padding-top: 20px;
+    padding-top: 30px; /* More space above footer text */
 }
 
 
-/* Responsive Design - Media Queries */
+/* Responsive Design - Media Queries (Minimalist) */
 
-/* For tablets and larger smartphones (adjust breakpoint as needed) */
+/* For tablets and larger smartphones */
 @media screen and (max-width: 768px) {
     .container {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     header {
-        padding: 40px 0;
+        padding: 60px 0;
     }
 
     .logo {
-        top: -20px;
-        left: 15px;
-        width: 80px;
+        width: 100px;
+        margin-bottom: 15px;
     }
 
     .title {
+        font-size: 3em;
+    }
+
+    .tagline {
+        font-size: 1.2em;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section h2 {
         font-size: 2.8em;
+        margin-bottom: 30px;
+    }
+
+    #features .feature-grid {
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    .feature-item i {
+        font-size: 3.5em;
+        margin-bottom: 15px;
+    }
+
+    .download-button, #wiki-link .wiki-button {
+        padding: 18px 35px;
+        font-size: 1.3em;
+    }
+}
+
+
+/* For smaller smartphones */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 50px 0;
+    }
+
+    .logo {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+
+    .title {
+        font-size: 2.4em;
     }
 
     .tagline {
@@ -349,55 +248,27 @@ footer {
     }
 
     .section {
-        padding: 60px 0;
+        padding: 70px 0;
     }
 
     .section h2 {
         font-size: 2.4em;
+        margin-bottom: 25px;
     }
 
-    .section h3 {
-        font-size: 1.6em;
-    }
-}
-
-
-/* For smaller smartphones (adjust breakpoint as needed) */
-@media screen and (max-width: 480px) {
-    header {
-        padding: 30px 0;
+    #features .feature-grid {
+        grid-template-columns: 1fr; /* Stack features on small screens */
+        gap: 40px;
+        margin-top: 40px;
     }
 
-    .logo {
-        display: none; /* Hide logo on very small screens if needed */
+    .feature-item i {
+        font-size: 3em;
+        margin-bottom: 15px;
     }
 
-    .title {
-        font-size: 2.2em;
-    }
-
-    .tagline {
-        font-size: 1em;
-    }
-
-    .section {
-        padding: 50px 0;
-    }
-
-    .section h2 {
-        font-size: 2em;
-    }
-
-    .section h3 {
-        font-size: 1.4em;
-    }
-
-    .wiki-links {
-        grid-template-columns: 1fr; /* Stack wiki links on small screens */
-    }
-
-    .build-links {
-        flex-direction: column; /* Stack build links on small screens */
-        align-items: center; /* Center links on small screens */
+    .download-button, #wiki-link .wiki-button {
+        padding: 16px 30px;
+        font-size: 1.2em;
     }
 }
