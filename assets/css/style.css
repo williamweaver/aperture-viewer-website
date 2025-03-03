@@ -2,13 +2,20 @@
 
 /* Basic Reset and Body Styles */
 body {
-    font-family: Verdana, sans-serif; /* Web-safe sans-serif for body text */
+    font-family: 'Rajdhani', sans-serif; /* Changed to Rajdhani font */
     font-size: 16px;
     line-height: 1.6;
-    color: #ddd; /* Light gray text color */
-    background-color: #0B0D26; /* Very dark blue background */
-    margin: 0; /* Reset default margin */
-    padding: 0; /* Reset default padding */
+    color: #ddd;
+    background-color: #0B0D26;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rajdhani', sans-serif; /* Changed to Rajdhani font */
+    font-weight: 600;
+    color: #fff;
 }
 
 /* Container for content - to limit width on larger screens */
