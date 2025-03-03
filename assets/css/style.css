@@ -1,245 +1,269 @@
-/* assets/css/style.css */
+/* assets/css/style.css - REVISED - Card-Based Wiki Portal Styling */
 
-/* Basic Reset and Body Styles */
+/* Basic Reset and Body Styles (Slightly Adjusted) */
 body {
-    font-family: 'PT Mono', monospace; /* Changed to PT Mono for body text */
+    font-family: 'PT Mono', monospace;
     font-size: 16px;
-    line-height: 1.6;
-    color: #ddd;
+    line-height: 1.7;
+    color: #f0f0f0;
     background-color: #0B0D26;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rajdhani', sans-serif; /* Changed to Rajdhani font */
-    font-weight: 600;
-    color: #fff;
-}
-
-/* Container for content - to limit width on larger screens */
+/* Container for content (Adjusted Padding) */
 .container {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 40px; /* Increased side padding */
+    padding-right: 40px;
 }
 
-/* Header Styling */
+/* Header Styling (Subtly Adjusted) */
 header {
-    background-color: #0B0D26; /* Header background same as body */
-    padding: 20px 0;
-    border-bottom: 1px solid #384773; /* Medium blue-gray border below header */
+    background-color: #0B0D26;
+    padding: 35px 0; /* Slightly increased header padding */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* Subtler border */
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between; /* Logo on left, nav on right */
-    align-items: center; /* Vertically align logo and nav */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo img {
-    height: 50px; /* Adjust logo height as needed */
+    height: 55px; /* Slightly adjusted logo height */
 }
 
 nav ul {
-    list-style: none; /* Remove bullet points from list */
+    list-style: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Make nav links horizontal */
+    display: flex;
 }
 
 nav li {
-    margin-left: 20px; /* Spacing between nav links */
+    margin-left: 40px; /* Further increased nav link spacing */
 }
 
 nav a {
-    text-decoration: none; /* Remove underlines from links */
-    color: #ddd; /* Light gray nav link color */
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 5px; /* Slightly rounded corners for nav links */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;
+    color: #ccc; /* Slightly darker light gray for nav links */
+    font-weight: normal;
+    font-size: 1.15em; /* Slightly larger nav links */
+    transition: color 0.3s ease, padding-bottom 0.3s ease; /* Added padding transition */
+    padding-bottom: 3px; /* Small padding below nav links */
+    border-bottom: 2px solid transparent; /* Transparent border initially */
 }
 
 nav a:hover {
-    background-color: #281159; /* Dark purple-blue on hover */
+    color: #fff; /* White on hover */
+    border-bottom-color: #65BFBF; /* Teal border-bottom on hover (underline effect) */
+    padding-bottom: 3px; /* Maintain padding */
 }
 
-/* Main Content Styling */
-main {
-    padding-top: 40px;
-    padding-bottom: 40px;
+
+/* Hero Section - Wiki Portal (Significantly Restyled) */
+.hero-section.wiki-portal-hero {
+    background-color: #1a1a1a; /* Darker hero background */
+    color: #fff;
+    padding: 200px 0 160px 0; /* Increased Hero padding */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* No radial gradient overlay for now - cleaner look */
 }
 
-section {
-    margin-bottom: 60px; /* Spacing between sections */
+.hero-container.wiki-portal-container h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 5em; /* Even larger headline */
+    margin-bottom: 30px;
+    letter-spacing: 2px; /* Increased letter spacing */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* More prominent text shadow */
+    color: #fff;
+    text-transform: uppercase; /* Uppercase Headline */
 }
 
-/* Hero Section Styling */
-.hero-section {
-    background-color: #281159; /* Dark purple-blue hero background */
-    color: #fff; /* White text in hero section */
-    padding: 100px 0;
-    text-align: center; /* Center align hero content */
-}
-
-.hero-container h1 {
-    font-family: Georgia, serif; /* Serif font for main headline */
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    color: #fff; /* White headline color */
-}
-
-.hero-container .tagline {
-    font-size: 1.2em;
-    color: #eee; /* Slightly lighter text for tagline */
-    max-width: 800px;
+.hero-container.wiki-portal-container .tagline {
+    font-size: 1.4em; /* Further increased tagline size */
+    color: #ddd; /* Slightly darker light gray for tagline */
+    max-width: 950px; /* Even wider tagline max-width */
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px; /* Increased tagline margin bottom */
+    line-height: 1.9; /* Increased tagline line-height */
 }
 
-
-/* Features Section Styling */
-.features-section {
-    background-color: #384773; /* Medium blue-gray feature section background */
-    color: #fff;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.features-container h2 {
-    font-family: Georgia, serif; /* Serif font for section headlines */
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-.feature-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 30px;
-    padding: 0 20px; /* Add some padding to the sides of the grid */
-}
-
-.feature-item {
-    background-color: #0D0D0D; /* Dark gray feature item background */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-}
-
-.feature-item h3 {
-    font-size: 1.8em;
-    margin-bottom: 15px;
-    color: #65BFBF; /* Teal/Cyan accent color for feature titles */
-}
-
-.feature-item p {
-    color: #ddd; /* Light gray feature description text */
-}
-
-
-/* Gallery Section Styling (basic for now) */
-.gallery-section {
-    background-color: #0B0D26; /* Very dark blue gallery section background */
-    color: #fff;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.gallery-container h2 {
-    font-family: Georgia, serif;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-.gallery-carousel {
-    display: flex; /* Basic horizontal layout for now - will be carousel later */
-    gap: 20px;
-    overflow-x: auto; /* Enable horizontal scrolling if images overflow */
-    padding-bottom: 20px; /* Add padding at the bottom for scrollbar */
-}
-
-.gallery-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Call to Action Section Styling */
-.cta-section {
-    background-color: #281159; /* Dark purple-blue CTA background */
-    color: #fff;
-    padding: 80px 0;
-    text-align: center;
-}
-
-.cta-container h2 {
-    font-family: Georgia, serif;
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-.button {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.primary-button {
-    background-color: #65BFBF; /* Teal/Cyan primary button color */
-    color: #0D0D0D; /* Dark text on button */
+.button.primary-button.wiki-portal-button {
+    background-color: #65BFBF; /* Teal/Cyan button */
+    color: #1a1a1a; /* Dark button text */
+    font-size: 1.3em; /* Larger button font */
+    padding: 20px 45px; /* Even larger button padding */
+    border-radius: 12px; /* More rounded button */
     font-weight: bold;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger button shadow */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Increased button letter spacing */
 }
 
-.primary-button:hover {
-    background-color: #9B65BF; /* Light purple on hover */
+.button.primary-button.wiki-portal-button:hover {
+    background-color: #9B65BF; /* Light purple button hover */
     color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Stronger hover shadow */
+    transform: translateY(-2px); /* Subtle button lift on hover */
 }
 
-.secondary-ctas {
-    margin-top: 20px;
+/* Wiki Index Sections - STYLED CARDS! */
+.wiki-index-section {
+    padding: 100px 0; /* Increased Wiki section padding */
+    background-color: #0B0D26; /* Keep wiki section background */
 }
 
-.secondary-ctas a {
-    color: #ddd; /* Light gray secondary CTA links */
-    text-decoration: underline;
-    margin: 0 15px;
+.wiki-index-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Slightly wider cards */
+    gap: 50px; /* Increased gap between cards */
 }
 
-/* Footer Styling */
-footer {
-    background-color: #0B0D26; /* Footer background same as body */
-    color: #ddd;
-    padding: 30px 0;
+.wiki-section-card {
+    background-color: #1a1a1a; /* Darker gray card background */
+    padding: 50px; /* Increased card padding */
+    border-radius: 20px; /* Even more rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6); /* Deeper shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent; /* Transparent border initially */
+}
+
+.wiki-section-card:hover {
+    transform: translateY(-8px); /* More pronounced card lift on hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); /* Stronger hover shadow */
+    border-color: #65BFBF; /* Teal border on hover */
+}
+
+.wiki-section-card h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2.8em; /* Larger card titles */
+    margin-top: 0;
+    margin-bottom: 35px; /* Increased title margin-bottom */
+    color: #fff;
+    letter-spacing: 1.2px; /* Increased card title letter spacing */
+    text-align: left; /* Left-align card titles */
+}
+
+.wiki-section-card .section-description {
+    color: #ddd; /* Softer white descriptions */
+    margin-bottom: 45px; /* Increased description margin-bottom */
+    line-height: 2; /* Increased description line height */
+    font-size: 1.1em; /* Slightly larger description text */
+}
+
+.wiki-section-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px; /* Increased list margin-bottom */
+}
+
+.wiki-section-card li {
+    margin-bottom: 15px; /* Increased list item margin-bottom */
+    position: relative; /* For pseudo-element bullets */
+    padding-left: 25px; /* Space for bullets */
+}
+
+.wiki-section-card li::before { /* Custom "bullet" using CSS pseudo-element */
+    content: '>'; /* Triangle bullet character */
+    position: absolute;
+    left: 0;
+    top: 3px; /* Adjust vertical alignment */
+    color: #65BFBF; /* Teal bullet color */
+    font-size: 0.9em; /* Bullet size */
+}
+
+
+.wiki-section-card > ul > li > a {
+    color: #65BFBF; /* Teal links in cards */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    padding: 10px 0; /* Increased link padding */
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    font-size: 1.1em; /* Larger main links */
+}
+
+.wiki-section-card > ul > li > a:hover {
+    color: #9B65BF; /* Light purple link hover */
+    padding-left: 15px; /* Increased hover indent */
+}
+
+.wiki-section-card ul ul { /* Nested list styling */
+    margin-top: 15px; /* Increased nested list margin-top */
+    margin-left: 25px;
+}
+
+.wiki-section-card ul ul li a { /* Nested list links */
+    color: #bbb; /* Slightly darker light gray for sub-links */
+    text-decoration: none;
+    display: block;
+    padding: 8px 0; /* Increased sub-link padding */
+    transition: color 0.3s ease, padding-left 0.3s ease;
+    font-size: 1em; /* Slightly larger sub-link font */
+}
+
+.wiki-section-card ul ul li a:hover {
+    color: #ddd; /* Light gray sub-link hover */
+    padding-left: 20px; /* Increased sub-link hover indent */
+}
+
+
+/* Call to Action Section - Wiki Portal (Adjusted Padding, Larger Headline) */
+.cta-section.wiki-portal-cta {
+    background-color: #1a1a1a; /* Darker gray CTA background */
+    color: #fff;
+    padding: 150px 0; /* Increased CTA padding */
     text-align: center;
-    border-top: 1px solid #384773; /* Medium blue-gray border above footer */
-    font-size: 0.9em;
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Subtler border */
+}
+
+.cta-container.wiki-portal-cta-container h2 {
+    font-family: 'Rajdhani', serif;
+    font-size: 3.5em; /* Larger CTA headline */
+    margin-bottom: 50px; /* Increased headline margin-bottom */
+    color: #fff;
+    letter-spacing: 1.5px; /* Increased headline letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle headline shadow */
+}
+
+.button.primary-button.wiki-portal-cta-button { /* Button styling - inherited from earlier */
+    /* ... (styles inherited from .button.primary-button.wiki-portal-button) ... */
+}
+
+
+/* Footer Styling (Subtly Adjusted Padding) */
+footer {
+    background-color: #0B0D26;
+    color: #aaa; /* Even darker light gray for footer text */
+    padding: 40px 0; /* Increased footer padding */
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Subtler footer border */
+    font-size: 0.95em; /* Slightly smaller footer font */
 }
 
 .footer-container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 footer a {
-    color: #65BFBF; /* Teal/Cyan for footer links */
+    color: #65BFBF;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
-
 
 /* ... (Add more CSS rules below as we go) ... */
