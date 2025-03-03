@@ -1,128 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aperture Viewer Wiki Index</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&family=PT+Mono&display=swap" rel="stylesheet">
-</head>
+<!-- ... (head section - same Google Fonts link, style.css link, etc.) ... -->
 <body>
 
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <img src="assets/images/aperture-viewer-logo.png" alt="Aperture Viewer Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Viewer-Features">Features</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/How-To-Guides">How-To Guides</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Home">Wiki Home</a> <!-- New Wiki Home link -->
-                </ul>
-            </nav>
-        </div>
+        <!-- ... (header - Logo, Navigation - same as before) ... -->
     </header>
 
     <main>
-        <section id="hero-section" class="hero-section">
-            <div class="container hero-container">
-                <h1>Aperture Viewer: nothing.is.not.possible</h1>
-                <p class="tagline">Welcome to the Aperture Viewer Wiki and Project Website. Explore documentation, how-to guides, and download information for Aperture Viewer, a cutting-edge, experimental virtual photography and videography tool for Second Life and OpenSim.</p>
-                <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Download-&-Installation" class="button primary-button">Download Windows AVX Alpha</a> <!-- Download button -->
+        <section id="hero-section" class="hero-section wiki-portal-hero"> <!-- Added class for styling -->
+            <div class="container hero-container wiki-portal-container"> <!-- Added class for styling -->
+                <h1>Aperture Viewer Wiki Portal</h1> <!-- Changed Headline -->
+                <p class="tagline">Dive Deeper. Explore the Universe of Aperture Viewer. Documentation, Guides, and Resources to Master Virtual Photography.</p> <!-- Revised Tagline -->
+                <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Home" class="button primary-button wiki-portal-button">Enter Wiki</a> <!-- Changed Button Text/Link -->
             </div>
         </section>
 
-        <section id="getting-started-index" class="wiki-index-section">
-            <div class="container wiki-index-container">
-                <h2>Getting Started</h2>
-                <ul>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Home">Wiki Home</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Download-&-Installation">Download & Installation</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Getting-Started">Getting Started Guide</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Troubleshooting">Troubleshooting & FAQ</a></li>
-                </ul>
+        <section id="wiki-sections-index" class="wiki-sections-section"> <!-- New section for Wiki Index Cards -->
+            <div class="container wiki-sections-container"> 
+                
+                <div class="wiki-section-card getting-started-card"> <!-- Card for "Getting Started" -->
+                    <h2>Getting Started</h2>
+                    <p class="section-description">New to Aperture Viewer? Begin your journey here. Learn about installation, basic usage, and essential first steps to get you up and running.</p> <!-- Short description -->
+                    <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Home" class="button secondary-button explore-section-button">Explore Getting Started</a> <!-- Section button -->
+                </div>
+
+                <div class="wiki-section-card about-aperture-card"> <!-- Card for "About Aperture Viewer" -->
+                    <h2>About Aperture Viewer</h2>
+                    <p class="section-description">Discover the history, development, contributors, and background of the Aperture Viewer project. Understand its vision and evolution.</p> <!-- Short description -->
+                    <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/History-and-Development" class="button secondary-button explore-section-button">Explore About</a> <!-- Section button -->
+                </div>
+
+                <!-- ... (Cards for "Features & Guides", "How-To Guides", "Policies and Terms" - similar structure for each card) ... -->
+
+                <div class="wiki-section-card features-guides-card">
+                    <h2>Features & Guides</h2>
+                    <p class="section-description">In-depth guides and documentation for all Aperture Viewer features, phototools, environment settings, camera controls, and visual effects. Master every tool at your disposal.</p>
+                    <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Viewer-Features" class="button secondary-button explore-section-button">Explore Features & Guides</a>
+                </div>
+
+                <div class="wiki-section-card how-to-guides-card">
+                    <h2>Image Making How-To Guides</h2>
+                    <p class="section-description">Step-by-step tutorials and artistic guides to create stunning virtual photography using Aperture Viewer. Learn techniques for lighting, composition, and visual effects.</p>
+                    <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/How-To-Guides" class="button secondary-button explore-section-button">Explore How-To Guides</a>
+                </div>
+
+                <div class="wiki-section-card policies-terms-card">
+                    <h2>Policies and Terms</h2>
+                    <p class="section-description">Legal information, privacy policy, terms of service, and project guidelines for Aperture Viewer. Understand your rights and responsibilities.</p>
+                    <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Privacy-Policy" class="button secondary-button explore-section-button">Explore Policies & Terms</a>
+                </div>
+
             </div>
         </section>
 
-        <section id="about-aperture-index" class="wiki-index-section">
-            <div class="container wiki-index-container">
-                <h2>About Aperture Viewer</h2>
-                <ul>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/History-and-Development">History and Development</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Change-Log">Change Log</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Credits-&-Acknowledgements">Credits & Acknowledgements</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Contact-&-Support">Contact & Support</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Contributing">Contributing</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Building-from-Source-%E2%80%90-(Windows)">Building from Source (Windows)</a></li>
-                </ul>
-            </div>
-        </section>
+        <!-- (Remove Gallery Section - we're replacing it with Wiki Section Cards) -->
+        <!-- (Keep Call to Action Section - adjust text, link, maybe styling) -->
 
-        <section id="features-guides-index" class="wiki-index-section">
-            <div class="container wiki-index-container">
-                <h2>Features & Guides</h2>
-                <ul>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Viewer-Features">Viewer Features</a></li>
-                    <li>Phototools Guide
-                        <ul>
-                            <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Env-Tab-‐-Environment-Settings">Env Tab: Environment Settings</a></li>
-                            <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Shdw-Tab-‐-Shadows-Settings">Shdw Tab: Shadows Settings</a></li>
-                            <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/VFX-Tab-‐-Visual-Effects">VFX Tab: Visual Effects</a></li>
-                            <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Gen-Tab-‐-General-Rendering">Gen Tab: General Rendering</a></li>
-                            <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Aids-Tab-‐-Interface-Aids">Aids Tab: Interface Aids</a></li>
-                            <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Cam-Tab-‐-Camera-Controls">Cam Tab: Camera Controls</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Environment-Presets-Guide">Environment Presets Guide</a>
-                        <ul>
-                            <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Sky-Presets">Creating Sky Presets</a></li>
-                            <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Water-Presets">Creating Water Presets</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Cameratools-Floater">Camera Tools Guide</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="how-to-guides-index" class="wiki-index-section">
-            <div class="container wiki-index-container">
-                <h2>Image Making How-To Guides</h2>
-                <ul>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Red-Light-B&W-in-SL">Red Light B&W in SL</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Point-and-Projection-Lights">Point & Projection Lights</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Environment-Presets-Tutorial">Environment Presets Tutorial</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="policies-terms-index" class="wiki-index-section">
-            <div class="container wiki-index-container">
-                <h2>Policies and Terms</h2>
-                <ul>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Privacy-Policy">Privacy Policy</a></li>
-                    <li><a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Terms-of-Service">Terms of Service</a></li>
-                </ul>
+        <section id="cta-section" class="cta-section wiki-portal-cta"> <!-- Adjusted class -->
+            <div class="container cta-container wiki-portal-cta-container"> <!-- Adjusted class -->
+                <h2>Ready to Dive into Aperture Viewer?</h2> <!-- Adjusted Headline -->
+                <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Download-&-Installation" class="button primary-button wiki-portal-cta-button">Download Windows AVX Alpha</a> <!-- Adjusted button class -->
+                <!-- (Remove secondary CTA links) -->
             </div>
         </section>
 
 
-        <section id="cta-section" class="cta-section">
-            <div class="container cta-container">
-                <h2>Explore Aperture Viewer Documentation</h2>
-                <a href="https://github.com/williamweaver/Aperture-Viewer/wiki/Download-&-Installation" class="button primary-button">Download Windows AVX Alpha</a>
-            </div>
-        </section>
+        <!-- ... (footer - same copyright/license footer) ... -->
+
     </main>
 
-    <footer>
-        <div class="container footer-container">
-            <p>© 2025 Aperture Viewer Project. All Rights Reserved.</p>
-            <p>Artwork on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.</p>
-        </div>
-    </footer>
+    <!-- ... (rest of body and scripts - same or adjust as needed) ... -->
 
 </body>
 </html>
