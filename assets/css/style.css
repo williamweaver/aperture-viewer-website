@@ -1,0 +1,238 @@
+/* assets/css/style.css */
+
+/* Basic Reset and Body Styles */
+body {
+    font-family: Verdana, sans-serif; /* Web-safe sans-serif for body text */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd; /* Light gray text color */
+    background-color: #0B0D26; /* Very dark blue background */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+}
+
+/* Container for content - to limit width on larger screens */
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* Header Styling */
+header {
+    background-color: #0B0D26; /* Header background same as body */
+    padding: 20px 0;
+    border-bottom: 1px solid #384773; /* Medium blue-gray border below header */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Logo on left, nav on right */
+    align-items: center; /* Vertically align logo and nav */
+}
+
+.logo img {
+    height: 50px; /* Adjust logo height as needed */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points from list */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Make nav links horizontal */
+}
+
+nav li {
+    margin-left: 20px; /* Spacing between nav links */
+}
+
+nav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #ddd; /* Light gray nav link color */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px; /* Slightly rounded corners for nav links */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+nav a:hover {
+    background-color: #281159; /* Dark purple-blue on hover */
+}
+
+/* Main Content Styling */
+main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+section {
+    margin-bottom: 60px; /* Spacing between sections */
+}
+
+/* Hero Section Styling */
+.hero-section {
+    background-color: #281159; /* Dark purple-blue hero background */
+    color: #fff; /* White text in hero section */
+    padding: 100px 0;
+    text-align: center; /* Center align hero content */
+}
+
+.hero-container h1 {
+    font-family: Georgia, serif; /* Serif font for main headline */
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    color: #fff; /* White headline color */
+}
+
+.hero-container .tagline {
+    font-size: 1.2em;
+    color: #eee; /* Slightly lighter text for tagline */
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Features Section Styling */
+.features-section {
+    background-color: #384773; /* Medium blue-gray feature section background */
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.features-container h2 {
+    font-family: Georgia, serif; /* Serif font for section headlines */
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    padding: 0 20px; /* Add some padding to the sides of the grid */
+}
+
+.feature-item {
+    background-color: #0D0D0D; /* Dark gray feature item background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.feature-item h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #65BFBF; /* Teal/Cyan accent color for feature titles */
+}
+
+.feature-item p {
+    color: #ddd; /* Light gray feature description text */
+}
+
+
+/* Gallery Section Styling (basic for now) */
+.gallery-section {
+    background-color: #0B0D26; /* Very dark blue gallery section background */
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.gallery-container h2 {
+    font-family: Georgia, serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.gallery-carousel {
+    display: flex; /* Basic horizontal layout for now - will be carousel later */
+    gap: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling if images overflow */
+    padding-bottom: 20px; /* Add padding at the bottom for scrollbar */
+}
+
+.gallery-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Call to Action Section Styling */
+.cta-section {
+    background-color: #281159; /* Dark purple-blue CTA background */
+    color: #fff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-container h2 {
+    font-family: Georgia, serif;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-button {
+    background-color: #65BFBF; /* Teal/Cyan primary button color */
+    color: #0D0D0D; /* Dark text on button */
+    font-weight: bold;
+}
+
+.primary-button:hover {
+    background-color: #9B65BF; /* Light purple on hover */
+    color: #fff;
+}
+
+.secondary-ctas {
+    margin-top: 20px;
+}
+
+.secondary-ctas a {
+    color: #ddd; /* Light gray secondary CTA links */
+    text-decoration: underline;
+    margin: 0 15px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #0B0D26; /* Footer background same as body */
+    color: #ddd;
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid #384773; /* Medium blue-gray border above footer */
+    font-size: 0.9em;
+}
+
+.footer-container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer a {
+    color: #65BFBF; /* Teal/Cyan for footer links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* ... (Add more CSS rules below as we go) ... */
