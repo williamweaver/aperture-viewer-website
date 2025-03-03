@@ -1,222 +1,403 @@
-/* ---------------------------------
-   RESET & GLOBAL STYLES
------------------------------------ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Global Styles and Color Palette */
+:root {
+    --color-primary: #9B65BF;         /* Aperture 256-1 */
+    --color-secondary: #281159;       /* Aperture 256-2 */
+    --color-background-dark: #0B0D26;   /* Aperture 256-3 */
+    --color-accent: #384773;          /* Aperture 256-4 */
+    --color-text-dark: #0D0D0D;        /* Aperture 256-5 */
+    --color-highlight-1: #65BFBF;     /* My Color Theme 1 */
+    --color-highlight-2: #B3BF65;     /* My Color Theme 2 */
+    --color-highlight-3: #9B65BF;     /* My Color Theme 3 (same as primary) */
+    --color-highlight-4: #BF8765;     /* My Color Theme 4 */
+    --color-highlight-5: #645C6A;     /* My Color Theme 5 */
+
+    --font-family-title: 'Space Grotesk', sans-serif;
+    --font-family-body: 'Roboto Mono', monospace;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  line-height: 1.6;
-  background-color: #0B0D26; /* Dark base (color-theme_Aperture_256-3) */
-  color: #fff;
+    font-family: var(--font-family-body);
+    background-color: var(--color-background-dark);
+    color: white;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* ---------------------------------
-   CONTAINER & TYPOGRAPHY
------------------------------------ */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-h1, h2, h3, p {
-  margin-bottom: 1rem;
-}
-
-/* ---------------------------------
-   HEADER & NAVIGATION
------------------------------------ */
+/* Header Styles */
 header {
-  background: #281159; /* Deep blue (color-theme_Aperture_256-2) */
-  padding: 20px 0;
+    background-color: var(--color-secondary);
+    padding: 60px 0;
+    text-align: center;
 }
 
-.header-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+.header-content {
+    position: relative; /* For logo positioning */
 }
 
 .logo {
-  width: 150px;
-  height: 150px;
-  margin-right: 20px;
+    position: absolute;
+    top: -30px; /* Adjust as needed to position logo */
+    left: 20px; /* Adjust as needed to position logo */
+    width: 100px;  /* Adjust logo size */
+    height: auto;
 }
 
-.header-text {
-  text-align: center;
-}
 
 .title {
-  font-size: 2.5rem;
-  color: #9B65BF; /* Main accent (color-theme_Aperture_256-1) */
+    font-family: var(--font-family-title);
+    font-size: 3.5em;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
 }
 
 .tagline {
-  font-size: 1.2rem;
-  color: #65BFBF; /* Super duper accent (My-Color-Theme-1) */
+    font-size: 1.2em;
+    color: var(--color-highlight-1);
+    margin-top: 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
-.navbar {
-  margin-top: 20px;
+
+/* Section Styles */
+.section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--color-accent);
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.last-section {
+    border-bottom: none; /* Remove border on the last section */
 }
 
-.navbar ul li {
-  margin: 0 15px;
+.section:nth-child(even) {
+    background-color: var(--color-text-dark); /* Slightly darker for even sections */
 }
 
-.navbar ul li a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
-  color: #B3BF65; /* Accent (My-Color-Theme-2) */
-}
-
-/* ---------------------------------
-   HERO SECTION
------------------------------------ */
-.hero {
-  background: linear-gradient(135deg, #384773, #0D0D0D); /* Gradient using color-theme_Aperture_256-4 and -5 */
-  padding: 100px 20px;
-  text-align: center;
-}
-
-.hero-content h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #9B65BF;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  color: #fff;
-}
-
-.cta-button {
-  text-decoration: none;
-  background: #65BFBF; /* My-Color-Theme-1 */
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-size: 1.2rem;
-  color: #0B0D26;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background: #B3BF65; /* My-Color-Theme-2 */
-}
-
-/* ---------------------------------
-   SECTIONS
------------------------------------ */
-section {
-  padding: 80px 0;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-  color: #9B65BF;
-}
-
-/* ---------------------------------
-   FEATURES SECTION
------------------------------------ */
-.features .feature-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.features .card {
-  background: #281159;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.features .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.features .card h3 {
-  margin-bottom: 15px;
-  color: #65BFBF;
-}
-
-.features .card p {
-  color: #fff;
-}
-
-/* ---------------------------------
-   GENERAL BUTTON STYLE
------------------------------------ */
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  background: #9B65BF;
-  padding: 10px 25px;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  color: #fff;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #BF8765; /* My-Color-Theme-4 */
-}
-
-/* ---------------------------------
-   FOOTER
------------------------------------ */
-footer {
-  background: #0D0D0D;
-  padding: 20px 0;
-  text-align: center;
-  color: #fff;
-}
-
-/* ---------------------------------
-   RESPONSIVE DESIGN
------------------------------------ */
-@media (max-width: 768px) {
-  .header-top {
-    flex-direction: column;
+.section h2 {
+    font-family: var(--font-family-title);
+    font-size: 2.8em;
+    color: white;
+    margin-bottom: 20px;
     text-align: center;
-  }
-  
-  .navbar ul {
-    flex-direction: column;
-  }
-  
-  .navbar ul li {
-    margin: 10px 0;
-  }
-  
-  .features .feature-cards {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.section h3 {
+    font-family: var(--font-family-title);
+    font-size: 1.8em;
+    color: var(--color-highlight-2);
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.section h4 {
+    font-family: var(--font-family-title);
+    font-size: 1.5em;
+    color: var(--color-highlight-3);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+.section-content {
+    margin-top: 30px;
+}
+
+.section p {
+    font-size: 1.1em;
+    color: #eee; /* Slightly lighter text for body */
+    margin-bottom: 15px;
+}
+
+.section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.section ul li {
+    margin-bottom: 8px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.section ul li::before {
+    content: "•"; /* Bullet point */
+    position: absolute;
+    left: 0;
+    color: var(--color-primary); /* Bullet color */
+    font-size: 1.4em;
+    top: -2px; /* Adjust vertical alignment */
+}
+
+.note, .warning, .important, .caution, .tip {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+}
+
+.warning {
+    background-color: #BF6565; /* Reddish for warning */
+}
+
+.important {
+    background-color: var(--color-highlight-4); /* Orange/Gold for important */
+}
+
+.caution {
+    background-color: #BFAF65; /* Yellowish for caution */
+    color: var(--color-text-dark); /* Dark text for contrast on yellow */
+}
+
+.tip {
+    background-color: var(--color-highlight-1); /* Cyan/Teal for tip */
+}
+
+
+/* Photobook Section */
+#photobooks .photobook-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.photobook {
+    display: flex;
     flex-direction: column;
     align-items: center;
-  }
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.photobook:hover {
+    transform: translateY(-5px);
+}
+
+.photobook img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.photobook p {
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Wiki Links Section */
+.wiki-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.wiki-links li {
+    padding: 0; /* Remove bullet padding */
+}
+
+.wiki-links li::before {
+    content: none; /* Remove bullets */
+}
+
+.wiki-links li a {
+    display: block;
+    padding: 12px 20px;
+    background-color: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.wiki-links li a:hover {
+    background-color: var(--color-primary);
+}
+
+
+/* Download Section */
+.download-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.download-button:hover {
+    background-color: var(--color-highlight-3); /* Highlight color on hover */
+    transform: scale(1.05);
+}
+
+.build-links {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    display: flex; /* Use flexbox for horizontal links */
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+    gap: 15px; /* Spacing between links */
+    justify-content: center; /* Center links horizontally */
+}
+
+.build-links li {
+    margin-bottom: 0; /* Remove default list item margin */
+    padding-left: 0; /* Remove bullet padding */
+}
+
+.build-links li::before {
+    content: none; /* Remove bullets */
+}
+
+.build-links li a {
+    display: inline-block; /* Make links inline-block for horizontal layout */
+    padding: 10px 15px;
+    background-color: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.build-links li a:hover {
+    background-color: var(--color-primary);
+}
+
+
+/* Highlight Links */
+.highlight-link {
+    color: var(--color-highlight-1);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.highlight-link:hover {
+    color: var(--color-highlight-2);
+    text-decoration: underline;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: var(--color-secondary);
+    color: #ddd;
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+.footer-content {
+    border-top: 1px solid var(--color-accent);
+    padding-top: 20px;
+}
+
+
+/* Responsive Design - Media Queries */
+
+/* For tablets and larger smartphones (adjust breakpoint as needed) */
+@media screen and (max-width: 768px) {
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    header {
+        padding: 40px 0;
+    }
+
+    .logo {
+        top: -20px;
+        left: 15px;
+        width: 80px;
+    }
+
+    .title {
+        font-size: 2.8em;
+    }
+
+    .tagline {
+        font-size: 1.1em;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section h2 {
+        font-size: 2.4em;
+    }
+
+    .section h3 {
+        font-size: 1.6em;
+    }
+}
+
+
+/* For smaller smartphones (adjust breakpoint as needed) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 30px 0;
+    }
+
+    .logo {
+        display: none; /* Hide logo on very small screens if needed */
+    }
+
+    .title {
+        font-size: 2.2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .section h2 {
+        font-size: 2em;
+    }
+
+    .section h3 {
+        font-size: 1.4em;
+    }
+
+    .wiki-links {
+        grid-template-columns: 1fr; /* Stack wiki links on small screens */
+    }
+
+    .build-links {
+        flex-direction: column; /* Stack build links on small screens */
+        align-items: center; /* Center links on small screens */
+    }
 }
