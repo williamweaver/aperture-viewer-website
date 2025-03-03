@@ -30,10 +30,10 @@ body {
     padding-right: 30px;
 }
 
-/* Header Styles (Minimalist) */
+/* Header Styles (HUGE Title & Logo) */
 header {
     background-color: var(--color-secondary);
-    padding: 80px 0;
+    padding: 100px 0; /* Increased header padding */
     text-align: center;
 }
 
@@ -44,30 +44,32 @@ header {
 }
 
 .logo {
-    width: 120px; /* Slightly larger logo */
+    width: 240px; /* MUCH BIGGER Logo - doubled size */
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px; /* Increased margin below logo */
 }
 
 .title {
-    font-family: var(--font-family-title);
-    font-size: 4em; /* Larger title */
-    font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif; /* Bebas Neue Font! */
+    font-size: 8em; /* VERY VERY VERY BIG Title! */
+    font-weight: 400; /* Bebas Neue is bold by default, so use normal weight */
     color: white;
-    margin-bottom: 10px;
-    letter-spacing: -1.5px;
+    margin-bottom: 15px; /* Increased margin below title */
+    letter-spacing: 2px; /* Slightly increased letter spacing for Bebas Neue */
+    text-transform: uppercase; /*  Uppercase for impact with Bebas Neue */
 }
 
 .tagline {
-    font-size: 1.4em; /* Slightly larger tagline */
+    font-family: var(--font-family-body); /* Revert tagline to body font */
+    font-size: 1.6em; /* Slightly larger tagline */
     color: var(--color-highlight-1);
     margin-top: 0;
     font-weight: 500;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px; /* Increased letter spacing for tagline */
 }
 
 
-/* Section Styles (Minimalist) */
+/* Section Styles (Minimalist - No Changes) */
 .section {
     padding: 100px 0; /* More vertical space */
     text-align: center;
@@ -87,7 +89,7 @@ header {
 }
 
 
-/* Feature Section (Minimalist) */
+/* Feature Section (Minimalist - No Changes) */
 #features .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -115,7 +117,7 @@ header {
 }
 
 
-/* Download Section (Minimalist) */
+/* Download Section (Minimalist - No Changes) */
 #download .alpha-notice {
     color: #ddd;
     font-size: 1.1em;
@@ -141,7 +143,7 @@ header {
 }
 
 
-/* Wiki Link Section (Minimalist) */
+/* Wiki Link Section (Minimalist - No Changes) */
 #wiki-link .wiki-button {
     display: inline-block;
     padding: 18px 35px; /* Similar to download button */
@@ -161,7 +163,7 @@ header {
 }
 
 
-/* Footer Styles (Minimalist) */
+/* Footer Styles (Minimalist - No Changes) */
 footer {
     background-color: var(--color-secondary);
     color: #aaa;
@@ -176,7 +178,7 @@ footer {
 }
 
 
-/* Responsive Design - Media Queries (Minimalist) */
+/* Responsive Design - Media Queries (Minimalist - Adjustments for Title and Logo) */
 
 /* For tablets and larger smartphones */
 @media screen and (max-width: 768px) {
@@ -186,20 +188,20 @@ footer {
     }
 
     header {
-        padding: 60px 0;
+        padding: 80px 0; /* Slightly reduced header padding on smaller screens */
     }
 
     .logo {
-        width: 100px;
-        margin-bottom: 15px;
+        width: 180px; /* Slightly smaller logo on tablet */
+        margin-bottom: 20px;
     }
 
     .title {
-        font-size: 3em;
+        font-size: 6em; /* Slightly smaller title on tablet */
     }
 
     .tagline {
-        font-size: 1.2em;
+        font-size: 1.4em; /* Adjust tagline size if needed */
     }
 
     .section {
@@ -231,20 +233,20 @@ footer {
 /* For smaller smartphones */
 @media screen and (max-width: 480px) {
     header {
-        padding: 50px 0;
+        padding: 60px 0; /* Even less header padding on phone */
     }
 
     .logo {
-        width: 80px;
-        margin-bottom: 10px;
+        width: 140px; /* Smaller logo on phone */
+        margin-bottom: 15px;
     }
 
     .title {
-        font-size: 2.4em;
+        font-size: 4.5em; /* Smaller title on phone */
     }
 
     .tagline {
-        font-size: 1.1em;
+        font-size: 1.2em; /* Adjust tagline size if needed */
     }
 
     .section {
