@@ -20,7 +20,7 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overflow-x: hidden; /* Prevent horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 .container {
@@ -30,11 +30,12 @@ body {
     padding-right: 30px;
 }
 
-/* Header Styles (HUGE Title & Logo) */
+/* Header Styles (HUGE Logo & Overlaid Title) */
 header {
     background-color: var(--color-secondary);
-    padding: 100px 0; /* Increased header padding */
+    padding: 120px 0; /* Increased header padding */
     text-align: center;
+    position: relative; /* For tagline positioning */
 }
 
 .header-content {
@@ -43,47 +44,58 @@ header {
     align-items: center;
 }
 
+.logo-container {
+    position: relative; /* Position context for logo and title */
+    margin-bottom: 20px; /* Space below logo/title block */
+}
+
 .logo {
-    width: 240px; /* MUCH BIGGER Logo - doubled size */
+    width: 720px; /* TRIPLED Logo Size! (3 * 240px) */
     height: auto;
-    margin-bottom: 30px; /* Increased margin below logo */
+    opacity: 0.6; /* Make logo slightly transparent as backdrop */
 }
 
 .title {
-    font-family: 'Bebas Neue', sans-serif; /* Bebas Neue Font! */
-    font-size: 8em; /* VERY VERY VERY BIG Title! */
-    font-weight: 400; /* Bebas Neue is bold by default, so use normal weight */
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 12em; /* Even BIGGER Title to emphasize overlay */
+    font-weight: 400;
     color: white;
-    margin-bottom: 15px; /* Increased margin below title */
-    letter-spacing: 2px; /* Slightly increased letter spacing for Bebas Neue */
-    text-transform: uppercase; /*  Uppercase for impact with Bebas Neue */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: absolute; /* Position title OVER logo */
+    top: 50%;         /* Vertically center title */
+    left: 50%;        /* Horizontally center title */
+    transform: translate(-50%, -50%); /* Center precisely */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add text shadow for better readability */
 }
 
 .tagline {
-    font-family: var(--font-family-body); /* Revert tagline to body font */
-    font-size: 1.6em; /* Slightly larger tagline */
+    font-family: var(--font-family-body);
+    font-size: 1.8em; /* Slightly larger tagline */
     color: var(--color-highlight-1);
-    margin-top: 0;
+    margin-top: 20px; /* More space above tagline */
     font-weight: 500;
-    letter-spacing: 1px; /* Increased letter spacing for tagline */
+    letter-spacing: 1.2px;
+    position: relative; /* Ensure tagline is below overlay */
+    z-index: 1;       /* Ensure tagline is above logo/title */
 }
 
 
 /* Section Styles (Minimalist - No Changes) */
 .section {
-    padding: 100px 0; /* More vertical space */
+    padding: 100px 0;
     text-align: center;
 }
 
 .section:nth-child(even) {
-    background-color: var(--color-text-dark); /* Darker for even sections */
+    background-color: var(--color-text-dark);
 }
 
 .section h2 {
     font-family: var(--font-family-title);
-    font-size: 3.5em; /* Larger section titles */
+    font-size: 3.5em;
     color: white;
-    margin-bottom: 40px; /* More space below titles */
+    margin-bottom: 40px;
     font-weight: 700;
     letter-spacing: -1px;
 }
@@ -93,8 +105,8 @@ header {
 #features .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 50px; /* More space between features */
-    margin-top: 60px; /* More space above features */
+    gap: 50px;
+    margin-top: 60px;
 }
 
 .feature-item {
@@ -105,7 +117,7 @@ header {
 }
 
 .feature-item i {
-    font-size: 4em; /* Larger icons */
+    font-size: 4em;
     color: var(--color-primary);
     margin-bottom: 20px;
 }
@@ -126,32 +138,32 @@ header {
 
 .download-button {
     display: inline-block;
-    padding: 20px 40px; /* Larger button */
+    padding: 20px 40px;
     background-color: var(--color-primary);
     color: white;
     text-decoration: none;
-    border-radius: 10px; /* More rounded button */
-    font-size: 1.4em; /* Larger button text */
+    border-radius: 10px;
+    font-size: 1.4em;
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .download-button:hover {
     background-color: var(--color-highlight-1);
-    transform: scale(1.08); /* More pronounced hover effect */
+    transform: scale(1.08);
 }
 
 
 /* Wiki Link Section (Minimalist - No Changes) */
 #wiki-link .wiki-button {
     display: inline-block;
-    padding: 18px 35px; /* Similar to download button */
+    padding: 18px 35px;
     background-color: var(--color-accent);
     color: white;
     text-decoration: none;
     border-radius: 10px;
-    font-size: 1.3em; /* Similar button text size */
+    font-size: 1.3em;
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -168,17 +180,17 @@ footer {
     background-color: var(--color-secondary);
     color: #aaa;
     text-align: center;
-    padding: 40px 0; /* More footer padding */
+    padding: 40px 0;
     font-size: 0.95em;
 }
 
 .footer-content {
     border-top: 1px solid var(--color-accent);
-    padding-top: 30px; /* More space above footer text */
+    padding-top: 30px;
 }
 
 
-/* Responsive Design - Media Queries (Minimalist - Adjustments for Title and Logo) */
+/* Responsive Design - Media Queries (Adjustments for HUGE Logo and Title) */
 
 /* For tablets and larger smartphones */
 @media screen and (max-width: 768px) {
@@ -188,20 +200,19 @@ footer {
     }
 
     header {
-        padding: 80px 0; /* Slightly reduced header padding on smaller screens */
+        padding: 100px 0; /* Slightly reduced header padding on smaller screens */
     }
 
     .logo {
-        width: 180px; /* Slightly smaller logo on tablet */
-        margin-bottom: 20px;
+        width: 480px; /* Reduced logo size on tablet */
     }
 
     .title {
-        font-size: 6em; /* Slightly smaller title on tablet */
+        font-size: 9em; /* Smaller title on tablet */
     }
 
     .tagline {
-        font-size: 1.4em; /* Adjust tagline size if needed */
+        font-size: 1.6em; /* Adjust tagline size if needed */
     }
 
     .section {
@@ -233,20 +244,20 @@ footer {
 /* For smaller smartphones */
 @media screen and (max-width: 480px) {
     header {
-        padding: 60px 0; /* Even less header padding on phone */
+        padding: 80px 0; /* Even less header padding on phone */
     }
 
     .logo {
-        width: 140px; /* Smaller logo on phone */
-        margin-bottom: 15px;
+        width: 300px; /* Smaller logo on phone */
+        opacity: 0.5; /* Make logo even more transparent on phone */
     }
 
     .title {
-        font-size: 4.5em; /* Smaller title on phone */
+        font-size: 6em; /* Smaller title on phone */
     }
 
     .tagline {
-        font-size: 1.2em; /* Adjust tagline size if needed */
+        font-size: 1.4em; /* Adjust tagline size if needed */
     }
 
     .section {
